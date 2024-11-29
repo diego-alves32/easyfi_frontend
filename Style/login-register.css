@@ -1,0 +1,192 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #2C3E50;
+    font-family: "Inter", sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 5%;
+}
+
+.login, .cadastro {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.primeira-coluna, .segunda-coluna {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #fff;
+}
+
+.logo {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 0 50px;
+    color: #2C3E50;
+
+    h1 {
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    img {
+        width: 50px;
+
+    }
+
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    color: #2C3E50;
+
+    h1 {
+        font-weight: 500;
+    }
+}
+
+.formulario form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.formulario form input {
+    width: 300px;
+    padding: 12px 0px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #2C3E50;
+    outline: none;
+    color: #2C3E50;
+    font-weight: 600;
+}
+
+.custom-select{
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+}
+
+.formulario a {
+    color: #7F8C8D;
+}
+
+.btn-default {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.btn-default button {
+    background: #D9D9D9;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-size: 16px;
+    transition: 0.2s ease;
+    cursor: pointer;
+    color: #2C3E50;
+    font-weight: 600;
+}
+
+.btn-default button:hover {
+    background: #F4EEEE;
+    color: #577695;
+    transform: scale(1.1);
+}
+
+.decor {
+    width: 40%;
+    height: 80vh;
+    background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), url(../Assets/Background/imagem_background.svg);
+    background-position: 50% 50%;
+    background-size: cover;
+    text-align: end;
+    align-content: flex-end;
+    color: #fff;
+
+    .mensagem {
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.mensagem hr {
+    width: 80%;
+    border: 2px solid;
+    margin-right: 1%;
+}
+
+.cadastro .logo {
+    padding-top: 0px;
+}
+
+.cadastro .formulario {
+    gap: 10px;
+    padding: 0;
+}
+
+.formulario form input {
+    padding: 10px 0px;
+
+}
+
+.cadastro .formulario h1 {
+    font-size: 28px;
+}
+
+.cadastro .decor .mensagem hr{
+    margin: 0;
+}
+
+/* Animação de entrada */
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+/* Animação de saída */
+.fade-out {
+    animation: fadeOut 0.5s ease-in-out forwards;
+}
+
+/* Definindo as keyframes para a animação de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Definindo as keyframes para a animação de saída */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+}

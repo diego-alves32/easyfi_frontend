@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyFi - Dashboard</title>
+    <script src="../Script/auth.js"></script>
+    <script>
+        paginasProtegidasSeLogado();
+    </script>
+    <link rel="stylesheet" href="../Style/style.css">
+    <link rel="stylesheet" href="../Style/dashboard.css">
+    <link rel="stylesheet" href="../Style/tip.css">
+    <!-- Link para o Chart.js via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="../Assets/Logo/logo-branca.svg" id="logo" alt="logo">
+            <h1>EasyFi</h1>
+        </div>
+
+        <div class="title">
+            <h2>Dashboard</h2>
+            <h3>Olá, <span id="nomeUsuario">User</span>! Seja Bem-Vindo!</h3>
+        </div>
+    </header>
+
+    <div class="sidebar">
+        <a href="#" id="profile">
+            <img src="../Assets/Icons/perfil-azul.png" alt="icon">
+        </a>
+
+        <div class="menu-dash">
+            <div id="tip"></div>
+
+            <a href="dashboard.html" id="dashboard">
+                <img src="../Assets/Icons/painel-azul.png" alt="icon">
+            </a>
+
+            <a href="transactions.html" id="transactions">
+                <img src="../Assets/Icons/tabela-azul.png" alt="icon">
+            </a>
+
+            <a href="transaction-form.html" id="transaction-form">
+                <img src="../Assets/Icons/adicionar-azul.png" alt="icon">
+            </a>
+        </div>
+
+        <a href="../index.html" id="logout">
+            <img src="../Assets/Icons/logout-azul.png" alt="icon">
+        </a>
+    </div>
+
+    <main class="dashboard">
+        <div class="cards">
+            <div class="card">
+                <span class="price" id="saldo">R$ 0.00</span>
+                <span class="title">Saldo atual</span>
+            </div>
+
+            <div class="card">
+                <span class="price" id="receita">R$ 0.00</span>
+                <span class="title">Receita</span>
+            </div>
+            <div class="card">
+                <span class="price" id="despesas">R$ 0.00</span>
+                <span class="title">Despesas</span>
+            </div>
+        </div>
+
+        <div class="chart">
+            <canvas id="transactionChart"></canvas>
+        </div>
+    </main>
+
+    <script src="../Script/script.js"></script>
+    <script src="../Script/chart-dashboard.js"></script>
+    <script src="../Script/tip.js"></script>
+</body>
+
+</html>

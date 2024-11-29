@@ -1,0 +1,10 @@
+#tip {
+    background-color: #4A9AF4;;
+    color: white;
+    margin: 0% 0% 0% 10%;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+    display: none;
+    position: absolute;
+}

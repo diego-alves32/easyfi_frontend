@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./Script/auth.js"></script>
+    <script>
+        paginasProtegidasSeNaoLogado();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="Style/style.css">
+    <link rel="stylesheet" href="Style/login-register.css">
+    <title>EasyFi - Login</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Tela de Login -->
+        <div class="login">
+            <div class="primeira-coluna">
+                <div class="logo">
+                    <img src="Assets/Logo/logo-azul.svg" alt="logo">
+                    <h1>EasyFi</h1>
+                </div>
+                <span id="result_alert" style="display: none;"></span>
+                <div class="formulario">
+                    <h1 class="title">Login</h1>
+                    <form id="loginForm">
+                        <input type="email" placeholder="Email" id="email" required>
+                        <input type="password" placeholder="Senha" id="senha" required>
+                        <div class="btn-default">
+                            <button type="submit">Entrar</button>
+                        </div>
+                    </form>
+                    <div class="uses">
+                        <a href="#" class="link">Esqueci minha senha</a>
+                    </div>
+                    <div>
+                        <p>Não possui conta?
+                            <span>
+                                <a href="register.html" class="link">Criar</a>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="decor">
+                <div class="mensagem">
+                    <hr>
+                    <h3>
+                        Facilite a organização dos seus gastos e receitas!
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="Script/login-register.js"></script>
+</body>
+
+</html>

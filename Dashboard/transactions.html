@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyFi - Lista de Transações</title>
+    <script src="../Script/auth.js"></script>
+    <script>
+        paginasProtegidasSeLogado();
+    </script>
+    <link rel="stylesheet" href="../Style/style.css">
+    <link rel="stylesheet" href="../Style/transactions.css">
+    <link rel="stylesheet" href="../Style/tip.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="../Assets/Logo/logo-branca.svg" id="logo" alt="logo">
+            <h1>EasyFi</h1>
+        </div>
+
+        <div class="title">
+            <h2>Lista de Transações</h2>
+            <h3>Olá, <span id="nomeUsuario">User</span>! Seja Bem-Vindo!</h3>
+        </div>
+    </header>
+
+    <div class="sidebar">
+        <a href="#" id="profile">
+            <img src="../Assets/Icons/perfil-azul.png" alt="icon">
+        </a>
+
+        <div class="menu-dash">
+            <div id="tip"></div>
+
+            <a href="dashboard.html" id="dashboard">
+
+                <img src="../Assets/Icons/painel-azul.png" alt="icon">
+            </a>
+
+            <a href="transactions.html" id="transactions">
+                <img src="../Assets/Icons/tabela-azul.png" alt="icon">
+            </a>
+
+            <a href="transaction-form.html" id="transaction-form">
+                <img src="../Assets/Icons/adicionar-azul.png" alt="icon">
+            </a>
+        </div>
+
+        <a href="../index.html" id="logout">
+            <img src="../Assets/Icons/logout-azul.png" alt="icon">
+        </a>
+    </div>
+
+
+    <main class="transactions">
+        <h3>Pesquisar Transações</h3>
+        <div class="search-bar">
+
+            <div class="filters">
+                <label for="dataInicio">De:</label>
+                <input type="date" name="dataInicio" id="dataInicio" placeholder="Selecione a data">
+                <label for="dataFim">à:</label>
+                <input type="date" name="dataFim" id="dataFim" placeholder="Selecione a data">
+            </div>
+
+            <button id="searchButton">Filtrar</button>
+        </div>
+
+        <div id="transactionList">
+            <!-- Resultados das transações filtradas aparecerão aqui -->
+        </div>
+    </main>
+
+    <div id="transactionModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h3>Resultados da Pesquisa</h3>
+            <div id="modalTransactionList">
+                <!-- A tabela será inserida dinamicamente aqui -->
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../Script/transactions.js"></script>
+    <script src="../Script/script.js"></script>
+    <script src="../Script/tip.js"></script>
+    <script>
+        document.getElementById("closeModal").addEventListener("click", function () {
+            console.log("Fechando modal");
+            document.getElementById("transactionModal").style.display = "none";
+        });
+
+        window.addEventListener("click", function (event) {
+            const modal = document.getElementById("transactionModal");
+            if (event.target === modal) {
+                console.log("Fechando modal por clique fora");
+                modal.style.display = "none";
+            }
+        });
+    </script>
+</body>
+
+</html>

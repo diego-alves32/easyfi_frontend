@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyFi - Nova Transação</title>
+    <script src="../Script/auth.js"></script>
+    <script>
+        paginasProtegidasSeLogado();
+    </script>
+    <link rel="stylesheet" href="../Style/style.css">
+    <link rel="stylesheet" href="../Style/transaction-form.css">
+    <link rel="stylesheet" href="../Style/tip.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="../Assets/Logo/logo-branca.svg" id="logo" alt="logo">
+            <h1>EasyFi</h1>
+        </div>
+
+        <div class="title">
+            <h2>Nova Transação</h2>
+            <h3>Olá, <span id="nomeUsuario">User</span>! Seja Bem-Vindo!</h3>
+        </div>
+    </header>
+
+    <div class="sidebar">
+        <a href="#" id="profile">
+            <img src="../Assets/Icons/perfil-azul.png" alt="icon">
+        </a>
+
+        <div class="menu-dash">
+            <div id="tip"></div>
+
+            <a href="dashboard.html" id="dashboard">
+
+                <img src="../Assets/Icons/painel-azul.png" alt="icon">
+            </a>
+
+            <a href="transactions.html" id="transactions">
+                <img src="../Assets/Icons/tabela-azul.png" alt="icon">
+            </a>
+
+            <a href="transaction-form.html" id="transaction-form">
+                <img src="../Assets/Icons/adicionar-azul.png" alt="icon">
+            </a>
+        </div>
+
+        <a href="../index.html" id="logout">
+            <img src="../Assets/Icons/logout-azul.png" alt="icon">
+        </a>
+    </div>
+
+    <main class="transaction-form">
+        <h3>Transações</h3>
+        <form id="formTransacao">
+            <div class="inputs">
+                <div>
+                    <label>Tipo:</label>
+                    <select class="custom-select" id="select_tipo">
+                        <option class="options" selected disabled>Selecione o tipo da transação</option>
+                        <option class="options" value="despesa">Despesa</option>
+                        <option class="options" value="receita">Receita</option>
+                    </select>
+                </div>
+
+
+                <div class="inputs inputs-uses">
+                    <!-- <input type="text" placeholder="ID"> -->
+                    <input type="date" placeholder="Data" id="dataTransacao">
+                </div>
+            </div>
+
+            <div class="inputs inputs-infos">
+                <div class="label">
+                    <label>Categoria:</label>
+                    <select class="custom-select" id="select_categoria">
+                        <option class="options" selected disabled>Selecione uma categoria</option>
+                        <!-- Colocar o restante -->
+                    </select>
+                </div>
+
+                <input type="text" placeholder="Descrição" id="descricao" required>
+                <input type="text" placeholder="Valor" id="valorTransacao" required>
+
+            </div>
+
+            <div class="btn">
+                <button type="submit">Salvar</button>
+                <button type="reset">Cancelar</button>
+            </div>
+
+        </form>
+    </main>
+
+    <script src="../Script/script.js"></script>
+    <script src="../Script/criarTransacao.js"></script>
+    <script src="../Script/tip.js"></script>
+</body>
+
+</html>

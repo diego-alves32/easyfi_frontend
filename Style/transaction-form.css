@@ -1,0 +1,86 @@
+/* Nova Transação */
+
+.transaction-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+
+    h3 {
+        padding-bottom: 24px;
+        text-align: center;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.inputs-infos {
+    padding-top: 36px;
+}
+
+.transaction-form form input {
+    background: none;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: none;
+    border-bottom: 2px solid #D9D9D9;
+    outline: none;
+    color: #D9D9D9;
+    font-family: "Inter", sans-serif;
+}
+
+.transaction-form form input::placeholder {
+    color: #D9D9D9;
+    font-size: 15px;
+    opacity: 1;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    padding-top: 24px;
+    gap: 20%;
+}
+
+.transaction-form form button {
+    width: 100px;
+    background: #D9D9D9;
+    border: none;
+    border-radius: 12px;
+    padding: 12px;
+    font-size: 16px;
+    color: #2C3E50;
+    font-weight: 600;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.transaction-form form button:hover {
+    background: #F4EEEE;
+    color: #577695;
+    transform: scale(1.1);
+}
+
+.custom-select {
+    padding: 6px 12px;
+    background: #D9D9D9;
+    border: none;
+    border-radius: 24px;
+    color: #2C3E50;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.custom-select .options {
+    color: #2C3E50;
+}

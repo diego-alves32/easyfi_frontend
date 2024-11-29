@@ -1,0 +1,98 @@
+/* Estilos gerais */
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    display: flex;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.transactions, .transaction-form {
+    min-width: 50%;
+    margin: 2% 28%;
+    padding: 20px;
+    background: #34495e;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+
+
+
+/* Header */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 6vh;
+    margin-left: 10%;
+    background-color: #34495e;
+    color: white;
+    padding: 15px;
+    text-align: end;
+}
+
+#logo {
+    width: 70px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.title h3{
+    font-weight: 500;
+}
+
+
+/* Barra lateral */
+.sidebar {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1c2b3a;
+    text-align: center;
+    height: 100vh;
+    position: fixed;
+    gap: 50px;
+}
+
+.sidebar a {
+    width: 45px;
+    display: block;
+    background-color: #fff;
+    border-radius: 100px;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    margin: 5px 0;
+    transition: 0.2s ease;
+}
+
+.sidebar a img{
+    width: 40px;
+}
+
+.sidebar a:hover {
+    background-color: #4A9AF4;
+    transform: scale(1.1);
+}
+
+.sidebar a.active {
+    background-color: #4A9AF4;
+    transform: scale(1.1);
+}
+
+.sidebar .menu-dash {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
